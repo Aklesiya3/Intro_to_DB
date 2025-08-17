@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS Authors (
 -- Books TABLE
 CREATE TABLE IF NOT EXISTS Books (
     book_id INT AUTO_INCREMENT PRIMARY KEY,
-    book_name VARCHAR(200) NOT NULL,
+    title VARCHAR(200) NOT NULL,
     author_id INT,
     price DECIMAL(10,2) NOT NULL,
     stock INT DEFAULT 0,
@@ -47,7 +47,4 @@ CREATE TABLE IF NOT EXISTS Order_details (
     FOREIGN KEY (book_id) REFERENCES Books(book_id)
 );
 
-    quantity INT NOT NULL,
-    FOREIGN KEY (order_id) REFERENCES ORDERS(order_id),
-    FOREIGN KEY (book_id) REFERENCES BOOKS(book_id)
 );
