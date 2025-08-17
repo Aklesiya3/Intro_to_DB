@@ -23,10 +23,10 @@ CREATE TABLE IF NOT EXISTS Books (
 -- Customers TABLE
 CREATE TABLE IF NOT EXISTS Customers (
     customer_id INT AUTO_INCREMENT PRIMARY KEY,
-    customer_name VARCHAR(150) NOT NULL,
-    email VARCHAR(150) UNIQUE NOT NULL,
+    customer_name VARCHAR(215) NOT NULL,
+    email VARCHAR(215) UNIQUE NOT NULL,
     phone VARCHAR(20),
-    address VARCHAR(255)
+    address TEXT
 );
 
 -- Orders TABLE
@@ -45,6 +45,4 @@ CREATE TABLE IF NOT EXISTS Order_details (
     quantity INT NOT NULL,
     FOREIGN KEY (order_id) REFERENCES Orders(order_id),
     FOREIGN KEY (book_id) REFERENCES Books(book_id)
-);
-
 );
