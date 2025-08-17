@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""
-MySQLServer.py - Script to create 'alx_book_store' database
-"""
+
 
 import mysql.connector
 from mysql.connector import Error
